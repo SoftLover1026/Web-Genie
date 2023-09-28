@@ -1,0 +1,268 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  @apply text-gray-700;
+}
+.container {
+  @apply px-5 mx-auto;
+}
+
+.row {
+  @apply flex flex-wrap;
+}
+.header-hero::before {
+  content: '';
+  z-index: -1;
+  opacity: .9;
+  @apply absolute top-0 left-0 w-full h-full;
+}
+.header-hero .header-content h3 {
+  font-family: 'Playfair Display', serif;
+}
+.navigation {
+  @apply absolute top-0 left-0 z-20 w-full py-5 duration-300 bg-transparent;
+}
+.sticky {
+  @apply fixed py-4 bg-white shadow;
+}
+
+.show {
+  @apply block;
+}
+.toggler-icon {
+  @apply relative block duration-300 bg-gray-700;
+  height: 2px;
+  width: 30px;
+  margin: 6px 0;
+}
+.active>.toggler-icon:nth-child(1) {
+  @apply transform rotate-45;
+  top: 7px;
+}
+.active>.toggler-icon:nth-child(2) {
+  @apply opacity-0;
+}
+.active>.toggler-icon:nth-child(3) {
+  top: -8px;
+  transform: rotate(135deg);
+}
+
+.navbar-nav .nav-item a {
+  @apply relative inline-block px-4 py-3 font-semibold text-gray-900 duration-300;
+}
+
+.navbar-nav .nav-item.active a,
+.navbar-nav .nav-item a:hover {
+  @apply text-blue-600;
+}
+.navbar-nav .nav-item.active a::before,
+.navbar-nav .nav-item.active a::after,
+.navbar-nav .nav-item a:hover::before,
+.navbar-nav .nav-item a:hover::after {
+  @apply opacity-100;
+}
+
+.left-vertically-line {
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+  @apply absolute text-xs top-48;
+}
+
+.left-vertically-line span::after {
+  display: inline-block;
+  content: "";
+  border-left: .1rem solid black;
+  height: 3rem;
+  margin: 1rem;
+}
+
+.left-vertically-line span:last-child:after {
+  content: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav .nav-item::after {
+    content: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-nav .nav-item::after {
+    content: " \2022";
+    @apply m-auto text-[#26AE7D];
+  }
+}
+
+.navbar-nav .nav-item:last-child::after {
+  content: none;
+}
+
+.main-btn.video-popup {
+  @apply text-blue-600 bg-white;
+}
+.main-btn.video-popup:hover {
+  @apply bg-white shadow-xl;
+}
+
+.title {
+  line-height: 55px;
+  @apply mb-4 text-5xl font-semibold text-gray-900;
+}
+
+.services-title {
+  @apply mb-2 text-2xl font-medium text-gray-900;
+}
+
+.services-icon i {
+  font-size: 64px;
+  @apply text-blue-600;
+}
+.single-pricing {
+  @apply relative z-10 px-6 py-14 mx-4 mb-8 bg-white rounded-lg shadow-2xl border;
+}
+
+.single-pricing::before {
+  content: '';
+  @apply absolute top-0 left-0 right-0 w-40 h-1 m-auto bg-[#1A48BD];
+}
+
+.pricing-header {
+  @apply mb-6;
+}
+
+.sub-title {
+  @apply relative pb-2 text-xl font-semibold;
+}
+
+.pro .sub-title::after {
+  @apply ml-0 bg-blue-600;
+}
+
+.enterprise .sub-title::after {
+  @apply ml-auto mr-0 bg-blue-600;
+}
+
+.price {
+  @apply text-6xl font-bold text-gray-900;
+}
+
+.pricing-list ul li {
+  @apply mb-4 text-gray-900;
+}
+
+.pricing-list ul li i {
+  @apply mr-3 text-blue-600;
+}
+
+.bottom-shape {
+  z-index: -1;
+  @apply absolute bottom-0 left-0 w-full -mb-5;
+}
+
+.choose-package {
+  transform: translateX(-50%) translateY(-50%);
+  @apply text-center absolute z-10 left-1/2 top-full;
+}
+
+.call-action-image img {
+  @apply w-full h-full;
+  object-position: center center;
+  object-fit: cover;
+}
+
+.single-testimonial {
+  @apply p-10 mx-4 mt-8 mb-12 bg-white shadow-lg;
+}
+.testimonial-image {
+  @apply w-24 h-24 mx-auto mb-8 overflow-hidden rounded-full;
+}
+
+.slick-slide:focus {
+  @apply outline-none;
+}
+.slick-dots {
+  @apply absolute bottom-0 left-0 right-0 flex justify-center mx-auto -mb-10;
+}
+.slick-dots li {
+  @apply leading-none;
+}
+.slick-dots button {
+  text-indent: -999999px;
+  @apply w-3 h-3 m-1 duration-300 bg-blue-100 border-0 rounded-full;
+}
+.slick-dots .slick-active button,
+.slick-dots button:hover {
+  @apply bg-blue-600;
+}
+.slick-dots button:focus {
+  @apply outline-none;
+}
+
+.single-form textarea,
+.single-form input {
+  @apply w-full px-6 py-3 mb-1 duration-300 bg-white border border-gray-300 rounded;
+}
+.single-form textarea:focus,
+.single-form input:focus {
+  @apply border-blue-600 outline-none;
+}
+.form-message.error {
+  @apply text-red-500;
+}
+.form-message.success {
+  @apply text-green-400;
+}
+
+.header-social li a {
+  display: inherit;
+  @apply mr-2 text-2xl text-gray-700 duration-300;
+}
+
+.footer-social li a {
+  @apply mr-2 text-2xl text-gray-700 duration-300;
+}
+.footer-social li a:hover {
+  @apply text-blue-600;
+}
+.footer-title {
+  @apply mb-10 font-semibold text-white text-lg
+}
+.footer-link ul li a {
+  @apply flex items-start text-sm mb-3 text-white duration-300;
+}
+.footer-link ul li a:hover {
+  @apply text-blue-600;
+}
+
+
+.back-to-top {
+  @apply fixed bottom-0 right-0 z-20 flex items-center justify-center w-10 h-10 mb-8 mr-8 text-white duration-300 bg-blue-600 rounded;
+}
+
+.footer-copyright::before {
+  content: '';
+  @apply block w-full h-px bg-gray-700;
+}
+
+.services-image {
+  transform: translateY(-50%);
+  @apply rounded-full w-16 h-16 bg-[#26AE7D] flex justify-center items-center absolute top-0 left-4;
+}
+
+.get-in-touch ul li a {
+  @apply flex items-center text-sm mb-3 duration-300;
+}
