@@ -61,8 +61,26 @@ p {
   transform: rotate(135deg);
 }
 
+.navbar-nav .nav-item {
+  @apply my-3;
+}
+
 .navbar-nav .nav-item a {
-  @apply relative inline-block px-4 py-3 font-semibold text-gray-900 duration-300;
+  @apply relative px-4 py-3 font-semibold text-gray-900 duration-300;
+}
+
+.select-services .nav-item.active a,
+.select-services .nav-item:hover a {
+  background-color: #1f2732;
+  color: #fff;
+}
+
+.select-services .nav-item a {
+  transition-duration: .2s;
+  -ms-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -o-transition-duration: .2s;
 }
 
 .navbar-nav .nav-item.active a,
@@ -95,19 +113,19 @@ p {
 }
 
 @media (max-width: 768px) {
-  .navbar-nav .nav-item::after {
+  #navbarOne .navbar-nav .nav-item::after {
     content: none;
   }
 }
 
 @media (min-width: 769px) {
-  .navbar-nav .nav-item::after {
+  #navbarOne .navbar-nav .nav-item::after {
     content: " \2022";
     @apply m-auto text-[#26AE7D];
   }
 }
 
-.navbar-nav .nav-item:last-child::after {
+#navbarOne .navbar-nav .nav-item:last-child::after {
   content: none;
 }
 
@@ -265,4 +283,10 @@ p {
 
 .get-in-touch ul li a {
   @apply flex items-center text-sm mb-3 duration-300;
+}
+
+#wrapper {
+  height: 0px;
+  overflow: hidden;
+  transition: height 200ms;
 }

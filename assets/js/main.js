@@ -7,6 +7,26 @@ $(function() {
     $(window).on('load', function(event) {
         $('#preloader').delay(500).fadeOut(500);
     });
+
+
+    //===== Collapse Button
+    var b = $(".collapse-btn");
+
+    b.click(function() {
+        console.log("clicked");
+        var w = $(this).siblings('#wrapper');
+        var l = w.find('#list');
+        var spanTag = $(this).find("span");
+        if(w.hasClass('open')) {
+            w.removeClass('open');
+            w.height(0);
+            spanTag.text("+");
+        } else {
+            w.addClass('open');
+            w.height(l.outerHeight(true));
+            spanTag.text("-");
+        }
+    });
     
     
     //===== Mobile Menu 
@@ -19,6 +39,15 @@ $(function() {
     $(".navbar-nav a").on('click', function() {
         $(".navbar-toggler").removeClass('active');
     });
+
+    $(".select-services .nav-item a").on('click', function() {
+        $(this).parent().siblings().removeClass('active');
+        $(this).parent().addClass('active');
+
+        const dataTargetValue = $(this).attr('data-target');
+        $('#' + dataTargetValue).removeClass('hidden');
+        $('#' + dataTargetValue).siblings().addClass('hidden');
+    })
     
     
     //===== close navbar-collapse when a  clicked

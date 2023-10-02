@@ -102,26 +102,26 @@
             <div class="col-span-1">
                 <div class="bg-gray-100 rounded-2xl shadow-lg py-12 px-6">
                     <h3 class="text-2xl font-normal">Our Services</h3>
-                    <div class="border border-gray-300 bg-white rounded-xl my-4 p-4 flex justify-between items-center">
-                        <p class="text-black font-normal text-sm">Web Designing</p>
-                        <i class="lni-chevron-right font-bold text-xs"></i>
-                    </div>
-                    <div class="border border-gray-300 bg-white rounded-xl my-4 p-4 flex justify-between">
-                        <p class="text-black font-normal text-sm">Web Development</p>
-                        <i class="lni-chevron-right font-bold text-xs"></i>
-                    </div>
-                    <div class="border border-gray-300 bg-white rounded-xl my-4 p-4 flex justify-between">
-                        <p class="text-black font-normal text-sm">Web Application</p>
-                        <i class="lni-chevron-right font-bold text-xs"></i>
-                    </div>
-                    <div class="border border-gray-300 bg-white rounded-xl my-4 p-4 flex justify-between">
-                        <p class="text-black font-normal text-sm">Web Development</p>
-                        <i class="lni-chevron-right font-bold text-xs"></i>
-                    </div>
-                    <div class="border border-gray-300 bg-white rounded-xl my-4 p-4 flex justify-between">
-                        <p class="text-black font-normal text-sm">Web Designing</p>
-                        <i class="lni-chevron-right font-bold text-xs"></i>
-                    </div>
+                    <ul class="select-services">
+                        <li class="nav-item active">
+                            <a href="javascript:void(0)" class="border border-gray-300 bg-white rounded-xl my-4 p-4 flex justify-between items-center" data-target="web-designing">
+                                <span class="font-normal text-sm">Web Designing</span>
+                                <i class="lni-chevron-right font-bold text-xs"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="border border-gray-300 bg-white rounded-xl my-4 p-4 flex justify-between" data-target="web-development">
+                                <span class="font-normal text-sm">Web Development</span>
+                                <i class="lni-chevron-right font-bold text-xs"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="border border-gray-300 bg-white rounded-xl my-4 p-4 flex justify-between" data-target="web-application">
+                                <span class="font-normal text-sm">Web Application</span>
+                                <i class="lni-chevron-right font-bold text-xs"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="mt-10">
@@ -136,26 +136,72 @@
                 </div>
             </div>
             <div class="rounded-2xl col-span-2">
-                <div>
-                    <h3 class="text-2xl font-semibold">Web Development</h3>
-                    <p class="text-sm text-black">Web designing is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                    <div class="md:grid md:grid-cols-2 md:gap-4 mt-10">
-                        <div class="flex justify-center bg-[#F8F9FA] items-center">
-                            <img src="assets/imgs/web-development-slide2.png" alt="web-development-slide2">
-                            <div class="px-2 py-6">
-                                <h3 class="text-xl font-semibold">Best Solutions</h3>
-                                <p class="text-xs text-black">We focus on the best practices for it solutions and services.</p>
+                <div class="services-content">
+                    <div id="web-designing">
+                        <h3 class="text-2xl font-semibold">Web Designing</h3>
+                        <p class="text-sm text-black">Web designing is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <div class="md:grid md:grid-cols-2 md:gap-4 mt-10">
+                            <div class="flex justify-center bg-[#F8F9FA] items-center">
+                                <img src="assets/imgs/web-development-slide2.png" alt="web-development-slide2">
+                                <div class="px-2 py-6">
+                                    <h3 class="text-xl font-semibold">Best Solutions</h3>
+                                    <p class="text-xs text-black">We focus on the best practices for it solutions and services.</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-center bg-[#F8F9FA] items-center">
+                                <img src="assets/imgs/web-development-slide3.png" alt="web-development-slide3">
+                                <div class="px-2 py-6">
+                                    <h3 class="text-xl font-semibold">Best Solutions</h3>
+                                    <p class="text-xs text-black">We focus on the best practices for it solutions and services.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex justify-center bg-[#F8F9FA] items-center">
-                            <img src="assets/imgs/web-development-slide3.png" alt="web-development-slide3">
-                            <div class="px-2 py-6">
-                                <h3 class="text-xl font-semibold">Best Solutions</h3>
-                                <p class="text-xs text-black">We focus on the best practices for it solutions and services.</p>
-                            </div>
-                        </div>
+                        <p class="text-sm text-black mt-10">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
                     </div>
-                    <p class="text-sm text-black mt-10">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+    
+                    <div id="web-development" class="hidden">
+                        <h3 class="text-2xl font-semibold">Web Development</h3>
+                        <p class="text-sm text-black">Web development is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <div class="md:grid md:grid-cols-2 md:gap-4 mt-10">
+                            <div class="flex justify-center bg-[#F8F9FA] items-center">
+                                <img src="assets/imgs/web-development-slide2.png" alt="web-development-slide2">
+                                <div class="px-2 py-6">
+                                    <h3 class="text-xl font-semibold">Best Solutions</h3>
+                                    <p class="text-xs text-black">We focus on the best practices for it solutions and services.</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-center bg-[#F8F9FA] items-center">
+                                <img src="assets/imgs/web-development-slide3.png" alt="web-development-slide3">
+                                <div class="px-2 py-6">
+                                    <h3 class="text-xl font-semibold">Best Solutions</h3>
+                                    <p class="text-xs text-black">We focus on the best practices for it solutions and services.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-black mt-10">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    </div>
+    
+                    <div id="web-application" class="hidden">
+                        <h3 class="text-2xl font-semibold">Web Application</h3>
+                        <p class="text-sm text-black">Web application is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <div class="md:grid md:grid-cols-2 md:gap-4 mt-10">
+                            <div class="flex justify-center bg-[#F8F9FA] items-center">
+                                <img src="assets/imgs/web-development-slide2.png" alt="web-development-slide2">
+                                <div class="px-2 py-6">
+                                    <h3 class="text-xl font-semibold">Best Solutions</h3>
+                                    <p class="text-xs text-black">We focus on the best practices for it solutions and services.</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-center bg-[#F8F9FA] items-center">
+                                <img src="assets/imgs/web-development-slide3.png" alt="web-development-slide3">
+                                <div class="px-2 py-6">
+                                    <h3 class="text-xl font-semibold">Best Solutions</h3>
+                                    <p class="text-xs text-black">We focus on the best practices for it solutions and services.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-black mt-10">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    </div>
                 </div>
 
                 <div class="mt-10">
