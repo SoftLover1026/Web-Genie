@@ -2,7 +2,7 @@
 
 Frontend Template for Web Genie
 
-![web-genie](https://github.com/softlover1026/Web-Genie/assets/imgs/Screenshot.png?raw=true)
+![web-genie](https://github.com/softlover1026/Web-Genie/assets/imgs/Screenshot.png)
 
 ## Description
 
