@@ -8,12 +8,36 @@ $(function() {
         $('#preloader').delay(500).fadeOut(500);
     });
 
+    //===== load web-development page from service
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    var services = urlParams.get('services');
+
+    if (services) {
+        $(".select-services .nav-item").removeClass('active');
+        $(".select-services .nav-item a[data-target='" + services + "']").parent().addClass('active');
+
+        switch (services) {
+            case 'web-development':
+                $(".services-title").text('Web Development');
+                break;
+            case 'web-application':
+                $(".services-title").text('Web Application');
+                break;
+            default:
+                $(".services-title").text('Web Designing');
+                break;
+        }
+
+        $('#' + services).removeClass('hidden');
+        $('#' + services).siblings().addClass('hidden');
+    }
+    
 
     //===== Collapse Button
     var b = $(".collapse-btn");
 
     b.click(function() {
-        console.log("clicked");
         var w = $(this).siblings('#wrapper');
         var l = w.find('#list');
         var spanTag = $(this).find("span");
@@ -41,14 +65,21 @@ $(function() {
     });
 
     $(".select-services .nav-item a").on('click', function() {
-        $(this).parent().siblings().removeClass('active');
-        $(this).parent().addClass('active');
-
         const dataTargetValue = $(this).attr('data-target');
-        $('#' + dataTargetValue).removeClass('hidden');
-        $('#' + dataTargetValue).siblings().addClass('hidden');
+        var queryString = "?services=" + encodeURIComponent(dataTargetValue);
+        var fullUrl = "web-development.html" + queryString;
+
+        window.location.href = fullUrl;
     })
     
+    $("#select-services-mask a").on('click', function () {
+        const dataTargetValue = $(this).attr('data-target');
+
+        var queryString = "?services=" + encodeURIComponent(dataTargetValue);
+        var fullUrl = "web-development.html" + queryString;
+
+        window.location.href = fullUrl;
+    })
     
     //===== close navbar-collapse when a  clicked
     
