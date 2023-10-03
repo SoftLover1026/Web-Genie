@@ -1457,8 +1457,6 @@ p {
 .single-pricing{
   position: relative;
   z-index: 10;
-  margin-left: 1rem;
-  margin-right: 1rem;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   border-width: 1px;
@@ -1795,6 +1793,11 @@ p {
   .md\:mx-32{
     margin-left: 8rem;
     margin-right: 8rem;
+  }
+
+  .md\:mx-4{
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .md\:block{

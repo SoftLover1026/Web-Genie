@@ -150,7 +150,7 @@ p {
   @apply text-blue-600;
 }
 .single-pricing {
-  @apply relative z-10 px-6 py-14 mx-4 mb-8 bg-white rounded-lg shadow-2xl border;
+  @apply relative z-10 px-6 py-14 mb-8 bg-white rounded-lg shadow-2xl border;
 }
 
 .single-pricing::before {
