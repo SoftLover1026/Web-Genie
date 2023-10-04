@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 @tailwind base;
@@ -69,8 +69,8 @@ p {
   @apply relative px-4 py-3 font-semibold text-gray-900 duration-300;
 }
 
-.select-services .nav-item.active a,
-.select-services .nav-item:hover a {
+.select-services .nav-item.active button,
+.select-services .nav-item:hover button {
   background-color: #1f2732;
   color: #fff;
 }
@@ -259,13 +259,13 @@ p {
 .footer-title {
   @apply mb-10 font-semibold text-white text-lg
 }
-.footer-link ul li a {
+.footer-link ul li {
   @apply flex items-start text-sm mb-3 text-white duration-300;
 }
-.footer-link ul li a:hover {
+.footer-link ul li:hover {
+  cursor: pointer;
   @apply text-blue-600;
 }
-
 
 .back-to-top {
   @apply fixed bottom-0 right-0 z-20 flex items-center justify-center w-10 h-10 mb-8 mr-8 text-white duration-300 bg-blue-600 rounded;

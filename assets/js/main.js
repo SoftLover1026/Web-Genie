@@ -15,7 +15,7 @@ $(function() {
 
     if (services) {
         $(".select-services .nav-item").removeClass('active');
-        $(".select-services .nav-item a[data-target='" + services + "']").parent().addClass('active');
+        $(".select-services .nav-item button[data-target='" + services + "']").parent().addClass('active');
 
         switch (services) {
             case 'web-development':
@@ -64,7 +64,7 @@ $(function() {
         $(".navbar-toggler").removeClass('active');
     });
 
-    $(".select-services .nav-item a").on('click', function() {
+    $(".select-services .nav-item button").on('click', function() {
         const dataTargetValue = $(this).attr('data-target');
         var queryString = "?services=" + encodeURIComponent(dataTargetValue);
         var fullUrl = "web-development.html" + queryString;
@@ -72,7 +72,7 @@ $(function() {
         window.location.href = fullUrl;
     })
     
-    $("#select-services-mask a").on('click', function () {
+    $("#select-services-mask div").on('click', function () {
         const dataTargetValue = $(this).attr('data-target');
 
         var queryString = "?services=" + encodeURIComponent(dataTargetValue);
