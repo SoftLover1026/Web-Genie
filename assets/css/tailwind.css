@@ -805,6 +805,10 @@ video {
   height: 3.5rem;
 }
 
+.h-4{
+  height: 1rem;
+}
+
 .h-8{
   height: 2rem;
 }
